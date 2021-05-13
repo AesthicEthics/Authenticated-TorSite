@@ -1,0 +1,26 @@
+<!DOCTYPE HTML> 
+<html> 
+    <head>
+        <link rel="stylesheet" href="/main.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+
+    <body>
+        <h3 style: >Local Temprature: {{temprature}}</h3>
+        <h3>Local Time: {{time}} </h3>
+        <p style = 'font-family: monospace;'>Connection Status: {{status}} </p>
+        <p></p>
+        <script>
+            var stat = {{status1}};
+            if ((stat) == "Online"){
+                $("p").last().addClass("online");
+            } else {
+                $("p").last().addClass("offline");
+            }
+            
+        </script>
+        <h3 class=title>Luscious</h3>
+        <img src="C:\Users\HP\Desktop\Data\TKS\Ideas And Focuses\Internet Of Things & CyberSecurity\settings.png" class="rotate img1" width="35" height="35"></body>
+        <img src="C:\Users\HP\Desktop\Data\TKS\Ideas And Focuses\Internet Of Things & CyberSecurity\user1.png" class="img2" width="35" height="35"></img>
+    </body>
+</html>
