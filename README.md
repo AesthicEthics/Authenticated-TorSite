@@ -4,6 +4,8 @@ Developed and deployed a smart home webapp on Tor as an authenticated service ho
 
 This project was a proof of concept where TOR is used to enhance smart device security by shutting down WAN based vulnerabilities. Often time, when users connect to local smart devices over WAN, they expose sensitive information such as IP addresses and more. Onion routing allows same form of access but without exposing any sensitive information at all, and only allowing certain users access, even if multiple users know the onion url. 
 
+A large amount of this project was configuration file writing, bash scripting and raspbian OS developing. 
+
 --- Links & Development Questions ------
 
 Q: Currently using cron and a bash script to update data (such as temprature and proxy time) on the server every 5 mins, are there better options? 
