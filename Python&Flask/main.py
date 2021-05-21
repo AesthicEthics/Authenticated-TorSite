@@ -1,4 +1,4 @@
-#Currently a random number generated as I am developing the C code for ESP8266s 
+#!/usr/bin/python
 from flask import Flask
 from flask import render_template
 import time
@@ -6,10 +6,19 @@ import requests
 import random
 from random import randint
 import json
+import subprocess
+
+
+
+networks = subprocess.check_output('sudo iwlist wlan0 scanning | grep ESSID',shell=True)
+networks = networks.decode('ascii')
+networks = networks.replace('\r','')
+ssid = networks.split('\n')
+ssid = ssid[4:]
 
 app = Flask(__name__)
 
-apikey = "redacted"
+apikey = "6e5185f9ae58143d2c4fefc5a4d8d706"
 base = "http://api.openweathermap.org/data/2.5/weather?"
 city = 'Toronto'
 
@@ -22,15 +31,11 @@ acc = result.json()
 y = acc['main']
 temp = str(round(int(y['temp']) - 273.15))
 
-c = random.randint(0,10)
 
-d = (c)/(2.0)
-
-if d.is_integer() == True:
+if any("Redacted" in s for s in ssid):
     stat = "Online"
 else:
     stat = "Offline"
-
 
 
 @app.route('/', methods= ['GET'])
