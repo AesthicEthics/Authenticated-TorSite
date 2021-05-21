@@ -18,7 +18,7 @@ ssid = ssid[4:]
 
 app = Flask(__name__)
 
-apikey = "6e5185f9ae58143d2c4fefc5a4d8d706"
+apikey = "REDACTED"
 base = "http://api.openweathermap.org/data/2.5/weather?"
 city = 'Toronto'
 
