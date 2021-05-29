@@ -1,0 +1,11 @@
+[Unit] 
+Description=uWSGI instance to serve main.py 
+After=network.target
+
+[Service] 
+User=pi #this service will be executed as the user "pi" 
+WorkingDirectory=/usr/local/bin/Server #the operational directory the service will be using 
+ExecStart=/usr/local/bin/Server/uwsgi --ini main.ini #upon starting this service, go to the mentioned directory and execeute the mentioned command 
+
+[Install] 
+WantedBy=multi-user.target 
