@@ -1,0 +1,13 @@
+server {
+    listen 80;
+    server_name kjux6643z6cr3kue2q6qe2wg4pjck3gbshwy654dqkvjyvgcye6yn2id.onion  kjux6643z6cr3kue2q6qe2wg4pjck3gbshwy654dqkvjyvgcye6yn2id.onion;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/tmp/main.sock;
+    }
+
+    location /images {
+        alias /usr/local/bin/Server/templates/images;
+    }
+}
