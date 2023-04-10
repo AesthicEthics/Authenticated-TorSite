@@ -12,7 +12,4 @@ Q: Currently using cron and a bash script to update data (such as temprature and
 
 Links: 
 
-Tor & Onion Routing: https://www.torproject.org/
-UWSGI: https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
-Nginx: https://www.nginx.com/
-Flask: https://flask.palletsprojects.com/en/2.0.x/
+Project WriteUp: https://thakura.medium.com/using-tor-to-secure-iot-deployments-1e201b6959a6
